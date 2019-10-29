@@ -1,4 +1,5 @@
-function call() {
+function call(func) {
+  func();
 }
 
 function callTwice() {
