@@ -2,31 +2,45 @@ function call(func) {
   func();
 }
 
-function callTwice() {
+function callTwice(func) {
+  func();
+  func();
 }
 
-function callXTimes() {
+function callXTimes(func, num) {
+  for(let i = 0; i<num; i++){
+    func();
+  }
 }
 
-function returnFromFunc() {
+function returnFromFunc(func) {
+  return func();
 }
 
-function modifyString() {
+function modifyString(str, func) {
+return func(str);
+
 }
 
-function modifyNumber() {
+function modifyNumber(num, func) {
+  return func(num);
 }
 
-function modifyAnything() {
+function modifyAnything(anything, func) {
+return func(anything);
+
 }
 
-function twoFuncs() {
+function twoFuncs(func1, func2) {
+  return func2(func1());
 }
 
-function twoValues() {
+function twoValues(num1, num2, func) {
+  return func(num1, num2);
 }
 
-function twoValuesRTL() {
+function twoValuesRTL(num1, num2, func) {
+  return func (num2, num1);
 }
 
 
